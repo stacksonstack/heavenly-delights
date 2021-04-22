@@ -1,7 +1,7 @@
 import './App.css';
 import Home from "./Components/Home"
 import DefaultContainer from "./Containers/DefaultContainer"
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 
 function App() {
   return (

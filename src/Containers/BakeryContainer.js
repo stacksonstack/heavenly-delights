@@ -24,7 +24,8 @@ function BakeryContainer() {
             isAvailable={bakedGood.isAvailable}
             onSale={bakedGood.onSale}
             salePrice={bakedGood.salePrice}
-            image={bakedGood.image.url}
+            image={bakedGood.image.formats.thumbnail.url}
+            
           />
         ))}
       </div>
