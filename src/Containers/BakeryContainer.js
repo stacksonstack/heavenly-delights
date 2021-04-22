@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import BakeryPreview from "../Components/BakeryPreview";
+import { Route, Switch } from "react-router-dom";
+import BakeryInfo from "../Components/BakeryInfo";
 
-function BakeryContainer() {
+function BakeryContainer(props) {
   const [bakery, setBakery] = useState([]);
 
   useEffect(() => {
@@ -12,23 +14,61 @@ function BakeryContainer() {
 
   return (
     <>
-      <h1>Heavenly Delights Bakery</h1>
-      <div>
-        {bakery.map((bakedGood) => (
-          <BakeryPreview
-            key={bakedGood.id}
-            name={bakedGood.name}
-            desc={bakedGood.description}
-            price={bakedGood.price}
-            ml={bakedGood.milligrams}
-            isAvailable={bakedGood.isAvailable}
-            onSale={bakedGood.onSale}
-            salePrice={bakedGood.salePrice}
-            image={bakedGood.image.formats.thumbnail.url}
-            
-          />
-        ))}
-      </div>
+      {bakery.length === 0 ? (
+        <h1>Loading...</h1>
+      ) : (
+        <>
+          <Switch>
+            <Route
+              exact
+              path="/bakery"
+              render={() => {
+                return (
+                  <div>
+                    <h1>Heavenly Delights Bakery</h1>
+                    {bakery.map((bakedGood) => (
+                      <BakeryPreview
+                        key={bakedGood._id}
+                        bakeryId={bakedGood._id}
+                        name={bakedGood.name}
+                        desc={bakedGood.description}
+                        price={bakedGood.price}
+                        ml={bakedGood.milligrams}
+                        isAvailable={bakedGood.isAvailable}
+                        onSale={bakedGood.onSale}
+                        salePrice={bakedGood.salePrice}
+                        image={bakedGood.image.formats.thumbnail.url}
+                      />
+                    ))}
+                  </div>
+                );
+              }}
+            />
+            <Route
+              path="/bakery/:id"
+              render={({ match }) => {
+                let id = match.params.id;
+                let foundBakedGood = bakery.find(
+                  (bakedGood) => bakedGood._id === id
+                );
+                return (
+                  <BakeryInfo
+                    key={foundBakedGood._id}
+                    name={foundBakedGood.name}
+                    desc={foundBakedGood.description}
+                    price={foundBakedGood.price}
+                    ml={foundBakedGood.milligrams}
+                    isAvailable={foundBakedGood.isAvailable}
+                    onSale={foundBakedGood.onSale}
+                    salePrice={foundBakedGood.salePrice}
+                    image={foundBakedGood.image.formats.thumbnail.url}
+                  />
+                );
+              }}
+            />
+          </Switch>
+        </>
+      )}
     </>
   );
 }

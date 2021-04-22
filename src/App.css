@@ -1,0 +1,30 @@
+.nav {
+    height: 40px;
+    width: 100vw;
+    margin: 0px;
+    /* border-style: solid;
+    border-color: rgb(149, 217, 223);
+    border-width: 7px; */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .nav ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .nav li {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    color: rgb(0, 109, 121);
+    text-align: center;
+  }
+
+  
+  .nav li:hover {
+    color: rgb(255, 36, 0);
+  }
+  
