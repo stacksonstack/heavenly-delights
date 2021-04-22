@@ -1,18 +1,16 @@
 import './App.css';
-import Navbar from "./Components/Navbar"
-import BeverageContainer from "./Containers/BeverageContainer"
-import EdibleContainer from "./Containers/EdibleContainer"
 import Home from "./Components/Home"
-import AboutContainer from "./Containers/AboutContainer"
+import DefaultContainer from "./Containers/DefaultContainer"
+import { Route, Switch, withRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home/>
-      <AboutContainer />
-      <BeverageContainer />
-      <EdibleContainer />
+      <Switch>
+        <Route exact path="/" render={()=> <Home/>}/>
+        <Route component={DefaultContainer}/>
+      </Switch>
+      
     </div>
   );
 }

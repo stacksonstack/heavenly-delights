@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <>
         <ul>
-            <li> Bakery/Edibles</li>
+            <li> Bakery</li>
             <li> Beverages</li>
             <li> About Us</li>
         </ul>
