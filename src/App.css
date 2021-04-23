@@ -1,30 +1,92 @@
+html {
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+}
+.about-container {
+  display: grid;
+  grid-template-areas: "about newsletter";
+  min-height: 90vh;
+}
+
+.about {
+  grid-area: about;
+}
+.about,
+.newsletter {
+  text-align: center;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.newsletter {
+  grid-area: newsletter;
+}
+
+#nav {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+  /*Overriding css*/
+}
 .nav {
-    height: 40px;
-    width: 100vw;
-    margin: 0px;
-    /* border-style: solid;
+  height: 40px;
+  width: 100vw;
+  margin: 0px;
+  /* border-style: solid;
     border-color: rgb(149, 217, 223);
     border-width: 7px; */
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .nav ul {
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .nav li {
-    display: inline-block;
-    line-height: 40px;
-    padding: 0px 15px;
-    margin: 0 auto;
-    color: rgb(0, 109, 121);
-    text-align: center;
-  }
+  text-align: center;
+  font-weight: bold;
+}
 
-  
-  .nav li:hover {
-    color: rgb(255, 36, 0);
-  }
-  
+.nav ul {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav li {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  color: rgb(0, 109, 121);
+  text-align: center;
+}
+
+.nav li:hover {
+  color: rgb(255, 36, 0);
+}
+
+.bakery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.beverages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bakery-preview, .beverage-preview{
+  width: 300px;
+  margin: 50px;
+}
+#bakery-img, #beverage-img{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1, p{
+  text-align: center;
+}
+

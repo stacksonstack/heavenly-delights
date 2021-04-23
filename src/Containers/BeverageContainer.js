@@ -24,9 +24,10 @@ function BeverageContainer() {
               path="/beverages"
               render={() => {
                 return (
-                  <div>
+                  <>
                     <h1>Heavenly Delights Bar</h1>
-                    {beverage.map((beverage) => (
+                    <div className="beverages-container">
+                      {beverage.map((beverage) => (
                       <BeveragePreview
                         key={beverage._id}
                         beverageId={beverage._id}
@@ -40,7 +41,9 @@ function BeverageContainer() {
                         image={beverage.image.formats.thumbnail.url}
                       />
                     ))}
-                  </div>
+                    </div>
+                    
+                  </>
                 );
               }}
             />

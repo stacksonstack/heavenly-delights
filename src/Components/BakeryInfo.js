@@ -3,7 +3,7 @@ import React from "react";
 function BakeryInfo({name, desc, price, ml, isAvailable, onSale, salePrice, image}) {
 
   return (
-    <div>
+    <div className="bakery-info-div">
       <h1>{name}</h1>
       <p>{desc}</p>
       <p>{ml} ml</p>

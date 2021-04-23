@@ -24,23 +24,25 @@ function BakeryContainer(props) {
               path="/bakery"
               render={() => {
                 return (
-                  <div>
+                  <>
                     <h1>Heavenly Delights Bakery</h1>
-                    {bakery.map((bakedGood) => (
-                      <BakeryPreview
-                        key={bakedGood._id}
-                        bakeryId={bakedGood._id}
-                        name={bakedGood.name}
-                        desc={bakedGood.description}
-                        price={bakedGood.price}
-                        ml={bakedGood.milligrams}
-                        isAvailable={bakedGood.isAvailable}
-                        onSale={bakedGood.onSale}
-                        salePrice={bakedGood.salePrice}
-                        image={bakedGood.image.formats.thumbnail.url}
-                      />
-                    ))}
-                  </div>
+                    <div className="bakery-container">
+                      {bakery.map((bakedGood) => (
+                        <BakeryPreview
+                          key={bakedGood._id}
+                          bakeryId={bakedGood._id}
+                          name={bakedGood.name}
+                          desc={bakedGood.description}
+                          price={bakedGood.price}
+                          ml={bakedGood.milligrams}
+                          isAvailable={bakedGood.isAvailable}
+                          onSale={bakedGood.onSale}
+                          salePrice={bakedGood.salePrice}
+                          image={bakedGood.image.formats.thumbnail.url}
+                        />
+                      ))}
+                    </div>
+                  </>
                 );
               }}
             />

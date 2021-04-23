@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "../Components/Contact"
 
 function About() {
 
@@ -6,6 +7,7 @@ function About() {
     <>
         <h1>Our Company</h1>
         <p>Quick Blurb About this company</p>
+        <Contact />
         
     </>
   )
