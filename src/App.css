@@ -1,7 +1,7 @@
 html,body {
   min-height: 100vh;
-  background-color: rgb(255, 255, 255);
-  /* background-color: rgb(244, 144, 144); */
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(244, 144, 144);
   margin: 0;
 }
 
@@ -27,14 +27,18 @@ img{
 #icon{
   width: 50px;
   height: 50px;
+  color: rgb(255,255,255)
 }
+
+
 #icon-about, #icon{
-  color: rgb(244, 144, 144);
+  
   padding-left: 10px;
   padding-right: 10px; 
 }
 
 #icon-about{
+  color: rgb(255, 255, 255);
   width: 30px;
   height: 30px;
 }
@@ -43,6 +47,7 @@ img{
   color: rgb(234,26,6);
 }
 #logo{
+  border: 5px solid rgb(255, 255, 255);
   height: 350px;
   width: 350px;
 }
@@ -55,7 +60,11 @@ h2{
   color:rgb(244, 144, 144);
 }
 
-p,h1,h3{
+h1, #home-text{
+  color: rgb(255,255,255)
+}
+
+p,h3{
   color: rgb(40,80,55);
 }
 
@@ -65,6 +74,7 @@ p,h1,h3{
 }
 h1{
   font-size: 4rem;
+  
 }
 h2{
   font-size: 3rem;
@@ -83,11 +93,11 @@ p{
 .home {
   display: grid;
   grid-template-areas: "hTitle hImg"
-  "hContact hImg"
   "hText hImg"
   "hBtn hImg"
+  "hContact hImg"
   ;
-  grid-template-rows: 115px 90px 75px;
+  grid-template-rows: 100px 80px 50px;
   grid-template-columns: 500px 400px;
   text-align: center;
 }

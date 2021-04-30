@@ -13,7 +13,7 @@ function Home() {
       <div className="home-img"><img alt="heavenly delights logo" src="/images/logoFontless.png" id="logo"/></div>
       {/* <img alt="heavenly delights logo" src="/images/logo.png" id="logo"/> */}
       {/*BEST VERSION <img alt="heavenly delights logo" src="/images/logo9.png" id="logo"/> */}
-      <div className="home-text"><b><p>United By The Flower That Unites Us All</p></b></div>
+      <div className="home-text"><b><p id="home-text">United By The Flower That Unites Us All</p></b></div>
       <div className="home-btn"><button onClick={navigateTo}>Check Out Our Menu</button></div>
       <div className="home-contact"><div class="contact-btns">
       <a
