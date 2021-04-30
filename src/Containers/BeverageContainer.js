@@ -24,8 +24,8 @@ function BeverageContainer() {
               path="/beverages"
               render={() => {
                 return (
-                  <>
-                    <h1>Heavenly Delights Bar</h1>
+                  <div className="container">
+                    <h2>Heavenly Delights Bar</h2>
                     <div className="beverages-container">
                       {beverage.map((beverage) => (
                       <BeveragePreview
@@ -43,7 +43,7 @@ function BeverageContainer() {
                     ))}
                     </div>
                     
-                  </>
+                  </div>
                 );
               }}
             />

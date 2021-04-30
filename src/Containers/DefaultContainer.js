@@ -6,7 +6,7 @@ import { Route, Switch} from "react-router-dom";
 
 function DefaultContainer() {
   return (
-    <div>
+    <div className="background">
       <Navbar />
       <Switch><Route path="/bakery" render={() => <BakeryContainer />} />
         <Route path="/beverages" render={() => <BeverageContainer />} />

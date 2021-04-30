@@ -6,7 +6,7 @@ import Newsletter from "../Components/Newsletter"
 function AboutContainer() {
 
   return (
-    <div className="about-container">
+    <div className="container"><div className="about-container">
       <div className="about">
       <About />
       </div>
@@ -15,7 +15,8 @@ function AboutContainer() {
       </div>
 
  
-    </div>
+    </div></div>
+    
   );
 }
 

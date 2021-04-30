@@ -6,7 +6,7 @@ function BeveragePreview({name, price, image, beverageId }) {
   return (
     <div className="beverage-preview">
       <NavLink to={`/beverages/${beverageId}`}>
-        <h1>{name}</h1>
+        <h3>{name}</h3>
       </NavLink>
       
       <img id="beverage-img" alt={name} src={`http://localhost:1337${image}`}/>

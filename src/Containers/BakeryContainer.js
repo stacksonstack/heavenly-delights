@@ -24,8 +24,8 @@ function BakeryContainer(props) {
               path="/bakery"
               render={() => {
                 return (
-                  <>
-                    <h1>Heavenly Delights Bakery</h1>
+                  <div className="container">
+                    <h2>Heavenly Delights Bakery</h2>
                     <div className="bakery-container">
                       {bakery.map((bakedGood) => (
                         <BakeryPreview
@@ -42,7 +42,7 @@ function BakeryContainer(props) {
                         />
                       ))}
                     </div>
-                  </>
+                  </div>
                 );
               }}
             />

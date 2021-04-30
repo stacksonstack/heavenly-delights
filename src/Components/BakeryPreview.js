@@ -4,14 +4,19 @@ import { NavLink } from "react-router-dom";
 function BakeryPreview({name, price, image , bakeryId}) {
 
   return (
+    <>
+    <NavLink to={`/bakery/${bakeryId}`}>
     <div className="bakery-preview">
-      <NavLink to={`/bakery/${bakeryId}`}>
-         <h1>{name}</h1>
-      </NavLink>
+      
+         <h3>{name}</h3>
+      
      
       <img id="bakery-img" alt={name} src={`http://localhost:1337${image}`}/>
       <p>${price}</p>
+      
     </div>
+    </NavLink>
+    </>
   );
 }
 

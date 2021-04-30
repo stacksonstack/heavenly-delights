@@ -1,19 +1,126 @@
-html {
+html,body {
   min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(244, 144, 144); */
+  margin: 0;
 }
 
-.home {
+.background{
+  min-height: 100vh;
+  background-color: rgb(244, 144, 144);
+  margin: 0;
+}
+
+@font-face {
+  font-family: titleFont;
+  src: url("/src/Fonts/heavenlyFont.otf");
+}
+
+img{
+  border-radius: 50%;
+}
+
+.contact-btns{
+  margin-top: 1rem;
+}
+
+#icon{
+  width: 50px;
+  height: 50px;
+}
+#icon-about, #icon{
+  color: rgb(244, 144, 144);
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+#icon-about{
+  width: 30px;
+  height: 30px;
+}
+
+#icon:hover, #icon-about:hover{
+  color: rgb(234,26,6);
+}
+#logo{
+  height: 350px;
+  width: 350px;
+}
+
+h1,h2{
+  font-family: titleFont;
+}
+
+h2{
+  color:rgb(244, 144, 144);
+}
+
+p,h1,h3{
+  color: rgb(40,80,55);
+}
+
+#home-title{
+  font-size: 4rem;
+  margin: 0;
+}
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 3rem;
+}
+p{
+  font-family: Georgia;
+}
+
+.home-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   min-height: 90vh;
+}
+.home {
+  display: grid;
+  grid-template-areas: "hTitle hImg"
+  "hContact hImg"
+  "hText hImg"
+  "hBtn hImg"
+  ;
+  grid-template-rows: 115px 90px 75px;
+  grid-template-columns: 500px 400px;
+  text-align: center;
+}
+
+.home-title{
+  grid-area: hTitle;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.home-img{
+  grid-area: hImg;
+}
+.home-text{
+  grid-area: hText;
+  font-size: 1.3rem;
+}
+.home-btn{
+  grid-area: hBtn;
+}
+
+button{
+  height: 2rem;
+  border-radius: 10%;
+}
+.home-contact{
+  grid-area: hContact;
+  
 }
 .about-container {
   display: grid;
   grid-template-areas: "about newsletter";
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 .about {
@@ -38,7 +145,7 @@ html {
   /*Overriding css*/
 }
 .nav {
-  height: 40px;
+  height: 50px;
   width: 100vw;
   margin: 0px;
   /* border-style: solid;
@@ -46,6 +153,7 @@ html {
     border-width: 7px; */
   text-align: center;
   font-weight: bold;
+  background-color: rgba(244, 144, 144, .5);
 }
 
 .nav ul {
@@ -57,25 +165,55 @@ html {
   display: inline-block;
   line-height: 40px;
   padding: 0px 15px;
-  margin: 0 auto;
-  color: rgb(0, 109, 121);
+  /* margin: 0 auto; */
+  padding-top: 5px;
+  color: rgb(255,255,255);
   text-align: center;
+  font-size: 1.1rem;
+ 
 }
 
-.nav li:hover {
-  color: rgb(255, 36, 0);
+a{
+  text-decoration: none;
+}
+
+img{
+  transition: transform .2s;
+}
+img:hover{
+  transform: scale(1.5);
+ 
+}
+
+
+
+
+.nav li:hover, a h3:hover, a p:hover{
+  color: rgb(234,26,6);
 }
 
 .bakery-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+ 
 }
-
+.container{
+  background-color: rgb(255,255,255);
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 90vh;
+  max-height:100%;
+  border-radius: 1%;
+  margin-bottom: 30px;
+}
 .beverages-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 .bakery-preview, .beverage-preview{
   width: 300px;
@@ -86,7 +224,12 @@ display: block;
   margin-left: auto;
   margin-right: auto;
 }
-h1, p{
+h1, p, h2, h3{
   text-align: center;
+}
+
+h2{
+  margin: 0;
+  padding-top: 50px;
 }
 
