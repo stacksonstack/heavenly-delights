@@ -32,9 +32,7 @@ function BakeryContainer(props) {
                           key={bakedGood._id}
                           bakeryId={bakedGood._id}
                           name={bakedGood.name}
-                          desc={bakedGood.description}
                           price={bakedGood.price}
-                          ml={bakedGood.milligrams}
                           isAvailable={bakedGood.isAvailable}
                           onSale={bakedGood.onSale}
                           salePrice={bakedGood.salePrice}
@@ -64,6 +62,7 @@ function BakeryContainer(props) {
                     onSale={foundBakedGood.onSale}
                     salePrice={foundBakedGood.salePrice}
                     image={foundBakedGood.image.formats.thumbnail.url}
+                    closeUp= {foundBakedGood.close_up.formats.thumbnail.url}
                   />
                 );
               }}

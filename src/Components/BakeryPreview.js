@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function BakeryPreview({name, price, image , bakeryId}) {
+function BakeryPreview({name, price, image , bakeryId, onSale, isAvailable, salePrice}) {
 
   return (
     <>
@@ -12,8 +12,8 @@ function BakeryPreview({name, price, image , bakeryId}) {
       
      
       <img id="bakery-img" alt={name} src={`http://localhost:1337${image}`}/>
-      <p>${price}</p>
-      
+      {onSale?<> <p style={{ textDecoration: "line-through" }}>${price}</p> <p>${salePrice}</p></>: <p>${price}</p>   }
+      {isAvailable ? null : <p id="sold-out">Sold Out</p>}
     </div>
     </NavLink>
     </>

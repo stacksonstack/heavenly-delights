@@ -32,9 +32,7 @@ function BeverageContainer() {
                         key={beverage._id}
                         beverageId={beverage._id}
                         name={beverage.name}
-                        desc={beverage.description}
                         price={beverage.price}
-                        ml={beverage.milligrams}
                         isAvailable={beverage.isAvailable}
                         onSale={beverage.onSale}
                         salePrice={beverage.salePrice}
@@ -63,6 +61,7 @@ function BeverageContainer() {
                   onSale={foundBeverage.onSale}
                   salePrice={foundBeverage.salePrice}
                   image={foundBeverage.image.formats.thumbnail.url}
+                  closeUp={foundBeverage.close_up.formats.thumbnail.url}
                 />
 
               )}}/>
