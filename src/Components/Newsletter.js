@@ -8,7 +8,9 @@ function Newsletter() {
     <>
       <h2>Stay Tuned!</h2>
       <p>Sign up to get updates about new edibles and drinks!</p>
+      <div id="newsletter">
       <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL} />
+      </div>
     </>
   );
 }
