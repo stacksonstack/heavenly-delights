@@ -188,11 +188,13 @@ a{
 
 img{
   transition: transform .2s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 img:hover{
-  transform: scale(1.5);
- 
+  transform: scale(1.2);
 }
+
 
 
 
@@ -218,6 +220,10 @@ img:hover{
   border-radius: 1%;
   margin-bottom: 30px;
 }
+
+.home-wrapper, .container{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .beverages-container {
   display: flex;
   flex-wrap: wrap;
@@ -225,8 +231,12 @@ img:hover{
 
 }
 .bakery-preview, .beverage-preview{
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 300px;
   margin: 50px;
+  /* border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 #bakery-img, #beverage-img{
 display: block;
