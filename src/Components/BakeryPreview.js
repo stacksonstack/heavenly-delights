@@ -12,7 +12,7 @@ function BakeryPreview({name, price, image , bakeryId, onSale, isAvailable, sale
       
      
       <img id="bakery-img" alt={name} src={`http://localhost:1337${image}`}/>
-      {onSale?<> <p style={{ textDecoration: "line-through" }}>${price}</p> <p>${salePrice}</p></>: <p>${price}</p>   }
+      {onSale?<div className="price"> <p style={{ textDecoration: "line-through", paddingRight: "15px" }}>${price}</p> <p id="sold-out">${salePrice}</p></div>: <p>${price}</p>   }
       {isAvailable ? null : <p id="sold-out">Sold Out</p>}
     </div>
     </NavLink>

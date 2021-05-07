@@ -125,6 +125,19 @@ p {
 }
 .home-img {
   grid-area: hImg;
+  animation-name: spin;
+  animation-iteration-count: initial;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+}
+
+@keyframes spin{
+  from{
+    transform : rotate(0deg) scale(0.2);
+
+  } to{
+    transform : rotate(360deg) scale(1);
+  }
 }
 .home-text {
   grid-area: hText;
@@ -272,7 +285,7 @@ a p:hover {
 
 .home-wrapper,
 .container,
-img {
+img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 button {
@@ -342,4 +355,10 @@ h2 {
 }
 .info-close-up{
   grid-area: iClose;
+}
+
+.price{
+  display: inline-flex;
+  width: 100%;
+ justify-content: center;
 }
