@@ -51,24 +51,32 @@ function BeverageContainer() {
               let id = match.params.id;
               let foundBeverage = beverage.find((bev) => bev._id === id);
               return (
-                <BeverageInfo
-                  key={foundBeverage._id}
-                  name={foundBeverage.name}
-                  desc={foundBeverage.description}
-                  price={foundBeverage.price}
-                  ml={foundBeverage.milligrams}
-                  isAvailable={foundBeverage.isAvailable}
-                  onSale={foundBeverage.onSale}
-                  salePrice={foundBeverage.salePrice}
-                  image={foundBeverage.image.formats.thumbnail.url}
-                  closeUp={foundBeverage.close_up.formats.thumbnail.url}
-                />
+                <>
+                  <div className="container">
+                    {beverage.length === 0 ? (
+                      <h1>Loading...</h1>
+                    ) : (
+                      <BeverageInfo
+                        key={foundBeverage._id}
+                        name={foundBeverage.name}
+                        desc={foundBeverage.description}
+                        bev={beverage}
+                        price={foundBeverage.price}
+                        ml={foundBeverage.milligrams}
+                        isAvailable={foundBeverage.isAvailable}
+                        onSale={foundBeverage.onSale}
+                        salePrice={foundBeverage.salePrice}
+                        image={foundBeverage.image.formats.thumbnail.url}
+                        closeUp={foundBeverage.close_up.formats.thumbnail.url}
+                      />
+                    )}
+                  </div>
+                </>
               );
             }}
           />
         </Switch>
       </>
-      }
     </>
   );
 }

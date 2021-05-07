@@ -3,7 +3,9 @@ import React from "react";
 function BeverageInfo({name, desc, ml, onSale, price, salePrice, isAvailable, image, closeUp }) {
 
   return (
-    <div className="container">
+    
+   
+      
       <div className="grid-wrapper">
       <div className="bakery-info-div">
         <div className="info-name"><h2>{name}</h2></div>
@@ -14,7 +16,6 @@ function BeverageInfo({name, desc, ml, onSale, price, salePrice, isAvailable, im
       </div>
       <div className="info-img"><img alt={name} src={`http://localhost:1337${image}`}/></div>
       <div className="info-close-up"><img alt={`Close Up Of ${name}`} src={`http://localhost:1337${closeUp}`} /></div>
-    </div>
     </div>
     </div>
     

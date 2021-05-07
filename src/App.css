@@ -352,6 +352,7 @@ h2 {
 }
 .info-img{
   grid-area: iImg;
+  margin-right: -50px;
 }
 .info-close-up{
   grid-area: iClose;

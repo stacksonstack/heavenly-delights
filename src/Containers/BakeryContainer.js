@@ -14,6 +14,7 @@ function BakeryContainer(props) {
 
   return (
     <>
+    
       <>
         <Switch>
           <Route
@@ -45,6 +46,7 @@ function BakeryContainer(props) {
               );
             }}
           />
+          
           <Route
             path="/bakery/:id"
             render={({ match }) => {
@@ -53,6 +55,11 @@ function BakeryContainer(props) {
                 (bakedGood) => bakedGood._id === id
               );
               return (
+                <>
+                   <div className="container">
+                {bakery.length === 0 ? (
+                    <h1>Loading...</h1>
+                  ) : (
                 <BakeryInfo
                   key={foundBakedGood._id}
                   name={foundBakedGood.name}
@@ -64,7 +71,8 @@ function BakeryContainer(props) {
                   salePrice={foundBakedGood.salePrice}
                   image={foundBakedGood.image.formats.thumbnail.url}
                   closeUp={foundBakedGood.close_up.formats.thumbnail.url}
-                />
+                />)}</div>
+                </>
               );
             }}
           />

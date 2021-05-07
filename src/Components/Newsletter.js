@@ -1,5 +1,4 @@
 import React from "react";
-import Mailchimp from 'react-mailchimp-form'
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 
