@@ -328,10 +328,12 @@ h2 {
   "iName iName"
   "iImg iDesc"
   "iImg iMl"
-  "iClose iPrice"
-  "iClose iAvail";
-  grid-template-columns: 300px 400px;
+  "iImg iPrice"
+  "iImg iAvail";
+  grid-template-columns: 400px 300px;
 }
+
+
 .info-name{
   grid-area: iName;
 }
@@ -352,14 +354,15 @@ h2 {
 }
 .info-img{
   grid-area: iImg;
-  margin-right: -50px;
-}
-.info-close-up{
-  grid-area: iClose;
+  
 }
 
 .price{
   display: inline-flex;
   width: 100%;
  justify-content: center;
+}
+
+.carousel-root{
+  width: 300px;
 }

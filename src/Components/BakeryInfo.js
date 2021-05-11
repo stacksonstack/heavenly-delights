@@ -1,4 +1,6 @@
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function BakeryInfo({
   name,
@@ -44,15 +46,21 @@ function BakeryInfo({
           )}
         </div>
         <div className="info-img">
-          <img alt={name} src={`http://localhost:1337${image}`} />
-        </div>
-        <div className="info-close-up">
-          <img
-            alt={`Close Up Of ${name}`}
-            src={`http://localhost:1337${closeUp}`}
-          />
+        <Carousel>
+            <div>
+              <img alt={name} src={`http://localhost:1337${image}`} />
+            </div>
+            <div>
+              <img
+                alt={`Close Up Of ${name}`}
+                src={`http://localhost:1337${closeUp}`}
+              />
+            </div>
+          </Carousel>
         </div>
       </div>
+      
+      
     </div>
   );
 }
