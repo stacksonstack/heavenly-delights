@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.carousel-root .carousel .thumb.selected, .carousel-root .carousel .thumb:hover{
+  border:3px solid rgb(244, 144, 144);
+  border-radius: 50%;
+}
+
 .background {
   min-height: 100vh;
   background-color: rgb(244, 144, 144);
@@ -364,5 +369,11 @@ h2 {
 }
 
 .carousel-root{
-  width: 300px;
+  width: 275px;
 }
+
+.carousel-status{
+  background-color: rgb(244, 144, 144);
+}
+
+
