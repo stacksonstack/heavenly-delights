@@ -7,7 +7,7 @@ function About() {
     <>
         <h2>Our Company</h2>
         <p>Quick Blurb About this company</p>
-        <div class="contact-btns">
+        <div className="contact-btns">
       <a
         href="https://www.instagram.com/heavenlydelightss/"
         target="_blank"
