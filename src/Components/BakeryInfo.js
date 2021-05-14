@@ -27,13 +27,18 @@ function BakeryInfo({
         </div>
         <div className="info-price">
           {onSale ? (
-            <>
+            <div className="price-full-info">
               {" "}
-              <p id="info-price" style={{ textDecoration: "line-through" }}>
+              <p
+                id="info-price"
+                style={{ textDecoration: "line-through", paddingRight: "10px" }}
+              >
                 ${price}
               </p>{" "}
-              <p id="info-price">${salePrice}</p>{" "}
-            </>
+              <p id="info-price" style={{ color: "rgb(234, 26, 6)" }}>
+                ${salePrice}
+              </p>{" "}
+            </div>
           ) : (
             <p id="info-price">${price}</p>
           )}
@@ -46,7 +51,7 @@ function BakeryInfo({
           )}
         </div>
         <div className="info-img">
-        <Carousel>
+          <Carousel>
             <div>
               <img alt={name} src={`http://localhost:1337${image}`} />
             </div>
@@ -59,8 +64,6 @@ function BakeryInfo({
           </Carousel>
         </div>
       </div>
-      
-      
     </div>
   );
 }

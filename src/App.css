@@ -6,8 +6,9 @@ body {
   margin: 0;
 }
 
-.carousel-root .carousel .thumb.selected, .carousel-root .carousel .thumb:hover{
-  border:3px solid rgb(244, 144, 144);
+.carousel-root .carousel .thumb.selected,
+.carousel-root .carousel .thumb:hover {
+  border: 3px solid rgb(244, 144, 144);
   border-radius: 50%;
 }
 
@@ -36,7 +37,6 @@ img {
 #icon {
   width: 50px;
   height: 50px;
-  
 }
 #icon-about,
 #icon {
@@ -80,7 +80,6 @@ h3 {
   font-size: 4.5rem;
   margin: 0;
 }
-
 
 h1,
 .home-text,
@@ -136,12 +135,12 @@ p {
   animation-duration: 3s;
 }
 
-@keyframes spin{
-  from{
-    transform : rotate(0deg) scale(0.2);
-
-  } to{
-    transform : rotate(360deg) scale(1);
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(0.2);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
   }
 }
 .home-text {
@@ -181,17 +180,16 @@ button {
 
 .newsletter {
   grid-area: newsletter;
-  
 }
 #newsletter button {
   margin-left: 30px;
 }
 
-#newsletter{
+#newsletter {
   padding-top: 20px;
 }
 
-#newsletter-text{
+#newsletter-text {
   padding-top: 10px;
 }
 input {
@@ -200,17 +198,17 @@ input {
   border-color: rgb(244, 144, 144);
   width: 30%;
   text-align: center;
-  color:rgb(40, 80, 55);
+  color: rgb(40, 80, 55);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
-input:focus{
+input:focus {
   outline: none !important;
-  border:2px solid rgb(234, 26, 6);
+  border: 2px solid rgb(234, 26, 6);
 }
 
-#sold-out{
-  color:rgb(234, 26, 6);
+#sold-out {
+  color: rgb(234, 26, 6);
 }
 
 #nav {
@@ -270,7 +268,7 @@ a p:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
-.grid-wrapper{
+.grid-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -290,12 +288,19 @@ a p:hover {
 
 .home-wrapper,
 .container,
-img{
+#logo,
+#bakery-img,
+#beverage-img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-button {
+button{
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
+
+.control-arrow{
+  display: none;
+}
+
 
 .beverages-container {
   display: flex;
@@ -327,53 +332,60 @@ h2 {
   padding-top: 50px;
 }
 
-.bakery-info-div{
+.bakery-info-div {
   display: grid;
-  grid-template-areas: 
-  "iName iName"
-  "iImg iDesc"
-  "iImg iMl"
-  "iImg iPrice"
-  "iImg iAvail";
-  grid-template-columns: 400px 300px;
+  grid-template-areas:
+    "iName iName"
+    "iImg iDesc"
+    "iImg iMl"
+    "iImg iPrice"
+    "iImg iAvail";
+  grid-template-columns: 400px 400px;
+  grid-template-rows: auto 90px 50px 50px;
 }
 
-
-.info-name{
+.info-name {
   grid-area: iName;
 }
-.info-desc{
+.info-desc {
   grid-area: iDesc;
 }
-#info-desc, #info-price, #info-ml, #info-avail{
+#info-desc,
+#info-price,
+#info-ml,
+#info-avail {
   text-align: start;
 }
-.info-ml{
+.info-ml {
   grid-area: iMl;
 }
-.info-price{
+.info-price {
   grid-area: iPrice;
 }
-.info-avail{
+.info-avail {
   grid-area: iAvail;
 }
-.info-img{
+.info-img {
   grid-area: iImg;
-  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.price{
+.price,
+.price-full-info {
   display: inline-flex;
-  width: 100%;
- justify-content: center;
 }
 
-.carousel-root{
+.price {
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel-root {
   width: 275px;
 }
 
-.carousel-status{
+.carousel-status {
   background-color: rgb(244, 144, 144);
 }
-
-
