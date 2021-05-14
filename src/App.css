@@ -415,3 +415,32 @@ h2 {
   }
   
 }
+
+
+@media (max-width: 880px) {
+  #home-title{
+    padding-top: 40px;
+  }
+  .home-img{
+    margin-top: 0px;
+  }
+  .home {
+    grid-template-areas:
+      "hTitle"
+      "hImg"
+      "hText"
+      "hBtn"
+      "hContact";
+    grid-template-rows: 130px 280px 60px 40px;
+    grid-template-columns: 600px;
+    text-align: center;
+  }
+  #icon{
+    width:35px;
+    height: 35px;
+    padding-bottom: 50px;
+  }
+  .home-container {
+    min-height: 93vh;
+  }
+}
