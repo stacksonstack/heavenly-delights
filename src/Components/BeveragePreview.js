@@ -1,17 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function BeveragePreview({name, price, image, beverageId }) {
+function BeveragePreview({name, price, image, beverageId, onSale, salePrice , isAvailable}) {
 
   return (
-    <div className="beverage-preview">
+    <>
       <NavLink to={`/beverages/${beverageId}`}>
+        <div className="beverage-preview">
         <h3>{name}</h3>
-      </NavLink>
+      
       
       <img id="beverage-img" alt={name} src={`http://localhost:1337${image}`}/>
-      <p>${price}</p>
+      {onSale?<div className="price"> <p style={{ textDecoration: "line-through", paddingRight: "15px" }}>${price}</p> <p id="sold-out">${salePrice}</p></div>: <p>${price}</p>}
+      {isAvailable ? null : <p id="sold-out">Sold Out</p>}
     </div>
+    </NavLink>
+    </>
   );
 }
 

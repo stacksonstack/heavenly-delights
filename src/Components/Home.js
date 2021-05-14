@@ -7,7 +7,8 @@ function Home() {
   const navigateTo = () => history.push("/bakery");
 
   return (
-    <div className="home-container">
+    <div className="home-wrapper">
+      <div className="home-container">
       <div className="home">
       <div className="home-title"><h1 id="home-title">Heavenly Delights</h1></div>
       <div className="home-img"><img alt="heavenly delights logo" src="/images/logoFontless.png" id="logo"/></div>
@@ -31,6 +32,8 @@ function Home() {
     </div></div>
     </div>
     </div>
+    </div>
+    
     
   );
 }

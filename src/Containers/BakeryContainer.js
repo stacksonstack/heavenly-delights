@@ -14,27 +14,26 @@ function BakeryContainer(props) {
 
   return (
     <>
-      {bakery.length === 0 ? (
-        <h1>Loading...</h1>
-      ) : (
-        <>
-          <Switch>
-            <Route
-              exact
-              path="/bakery"
-              render={() => {
-                return (
-                  <div className="container">
-                    <h2>Heavenly Delights Bakery</h2>
+    
+      <>
+        <Switch>
+          <Route
+            exact
+            path="/bakery"
+            render={() => {
+              return (
+                <div className="container">
+                  <h2>Heavenly Delights Bakery</h2>
+                  {bakery.length === 0 ? (
+                    <h1>Loading...</h1>
+                  ) : (
                     <div className="bakery-container">
                       {bakery.map((bakedGood) => (
                         <BakeryPreview
                           key={bakedGood._id}
                           bakeryId={bakedGood._id}
                           name={bakedGood.name}
-                          desc={bakedGood.description}
                           price={bakedGood.price}
-                          ml={bakedGood.milligrams}
                           isAvailable={bakedGood.isAvailable}
                           onSale={bakedGood.onSale}
                           salePrice={bakedGood.salePrice}
@@ -42,35 +41,43 @@ function BakeryContainer(props) {
                         />
                       ))}
                     </div>
-                  </div>
-                );
-              }}
-            />
-            <Route
-              path="/bakery/:id"
-              render={({ match }) => {
-                let id = match.params.id;
-                let foundBakedGood = bakery.find(
-                  (bakedGood) => bakedGood._id === id
-                );
-                return (
-                  <BakeryInfo
-                    key={foundBakedGood._id}
-                    name={foundBakedGood.name}
-                    desc={foundBakedGood.description}
-                    price={foundBakedGood.price}
-                    ml={foundBakedGood.milligrams}
-                    isAvailable={foundBakedGood.isAvailable}
-                    onSale={foundBakedGood.onSale}
-                    salePrice={foundBakedGood.salePrice}
-                    image={foundBakedGood.image.formats.thumbnail.url}
-                  />
-                );
-              }}
-            />
-          </Switch>
-        </>
-      )}
+                  )}
+                </div>
+              );
+            }}
+          />
+          
+          <Route
+            path="/bakery/:id"
+            render={({ match }) => {
+              let id = match.params.id;
+              let foundBakedGood = bakery.find(
+                (bakedGood) => bakedGood._id === id
+              );
+              return (
+                <>
+                   <div className="container">
+                {bakery.length === 0 ? (
+                    <h1>Loading...</h1>
+                  ) : (
+                <BakeryInfo
+                  key={foundBakedGood._id}
+                  name={foundBakedGood.name}
+                  desc={foundBakedGood.description}
+                  price={foundBakedGood.price}
+                  ml={foundBakedGood.milligrams}
+                  isAvailable={foundBakedGood.isAvailable}
+                  onSale={foundBakedGood.onSale}
+                  salePrice={foundBakedGood.salePrice}
+                  image={foundBakedGood.image.formats.thumbnail.url}
+                  closeUp={foundBakedGood.close_up.formats.thumbnail.url}
+                />)}</div>
+                </>
+              );
+            }}
+          />
+        </Switch>
+      </>
     </>
   );
 }
