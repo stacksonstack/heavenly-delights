@@ -132,7 +132,7 @@ p {
   animation-name: spin;
   animation-iteration-count: initial;
   animation-timing-function: linear;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
 }
 
 @keyframes spin {
@@ -341,7 +341,7 @@ h2 {
     "iImg iPrice"
     "iImg iAvail";
   grid-template-columns: 400px 400px;
-  grid-template-rows: auto 90px 50px 50px;
+  grid-template-rows: 125px 90px 50px 50px;
 }
 
 .info-name {
@@ -388,4 +388,30 @@ h2 {
 
 .carousel-status {
   background-color: rgb(244, 144, 144);
+}
+
+@media (max-width: 1100px) {
+  #home-title{
+    font-size: 3.5rem;
+    padding-top: 40px;
+  }
+  .home-img{
+    margin-top: 40px;
+  }
+  .home-text{
+    font-size: 1.2rem;
+  }
+  #icon{
+    width:45px;
+    height: 45px;
+  }
+  .home {
+    grid-template-rows: 110px 80px 70px;
+    grid-template-columns: 500px 300px;
+  }
+  #logo {
+    height: 275px;
+    width: 275px;
+  }
+  
 }
