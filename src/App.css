@@ -132,7 +132,7 @@ p {
   animation-name: spin;
   animation-iteration-count: initial;
   animation-timing-function: linear;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes spin {
@@ -290,17 +290,16 @@ a p:hover {
 .container,
 #logo,
 #bakery-img,
-#beverage-img{
+#beverage-img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-button{
+button {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.control-arrow{
+.control-arrow {
   display: none;
 }
-
 
 .beverages-container {
   display: flex;
@@ -390,19 +389,26 @@ h2 {
   background-color: rgb(244, 144, 144);
 }
 
+.carousel-root .carousel .thumbs-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
 @media (max-width: 1100px) {
-  #home-title{
+  #home-title {
     font-size: 3.5rem;
     padding-top: 40px;
   }
-  .home-img{
+  .home-img {
     margin-top: 40px;
   }
-  .home-text{
+  .home-text {
     font-size: 1.2rem;
   }
-  #icon{
-    width:45px;
+  #icon {
+    width: 45px;
     height: 45px;
   }
   .home {
@@ -413,15 +419,13 @@ h2 {
     height: 275px;
     width: 275px;
   }
-  
 }
 
-
 @media (max-width: 880px) {
-  #home-title{
+  #home-title {
     padding-top: 40px;
   }
-  .home-img{
+  .home-img {
     margin-top: 0px;
   }
   .home {
@@ -435,12 +439,46 @@ h2 {
     grid-template-columns: 600px;
     text-align: center;
   }
-  #icon{
-    width:35px;
+  #icon {
+    width: 35px;
     height: 35px;
     padding-bottom: 50px;
   }
   .home-container {
     min-height: 93vh;
+  }
+  .about-container {
+    grid-template-areas: "about" "newsletter";
+  }
+  .bakery-info-div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .carousel-root {
+    width: 250px;
+  }
+}
+
+@media (max-width: 650px) {
+  .bakery-info-div {
+    grid-template-areas:
+      "iName iName"
+      "iImg iPrice"
+      "iImg iMl" 
+      "iImg iAvail"
+      "iDesc iDesc";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 100px 100px 170px;
+  }
+  .info-desc {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+   
+  }
+  #info-desc{
+    text-align: center;
+  }
+  #info-ml, #info-price{
+    font-weight: bold;
   }
 }
