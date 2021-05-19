@@ -11,4 +11,10 @@ This application is currently being built. The purpose of this application is to
 - React 
 - HTML
 - CSS
+- React Icons (https://react-icons.github.io/react-icons/)
+- React Responsive Carousel (https://www.npmjs.com/package/react-responsive-carousel)
+
+## Backend
+- Strapi API Built with Node
+- https://github.com/stacksonstack/heavenly-delights-api
 
