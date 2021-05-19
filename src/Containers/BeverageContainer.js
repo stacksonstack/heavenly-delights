@@ -7,7 +7,7 @@ function BeverageContainer() {
   const [beverage, setBeverage] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1337/beverages")
+    fetch("https://heavenly-delights-api.herokuapp.com/beverages")
       .then((res) => res.json())
       .then((res) => setBeverage(res));
   }, []);

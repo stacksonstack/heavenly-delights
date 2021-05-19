@@ -7,7 +7,7 @@ function BakeryContainer(props) {
   const [bakery, setBakery] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1337/bakeries")
+    fetch("https://heavenly-delights-api.herokuapp.com/bakeries")
       .then((res) => res.json())
       .then((res) => setBakery(res));
   }, []);

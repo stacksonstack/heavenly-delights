@@ -53,12 +53,12 @@ function BeverageInfo({
         <div className="info-img">
         <Carousel>
             <div>
-              <img  alt={name} src={`http://localhost:1337${image}`} />
+              <img  alt={name} src={`${image}`} />
             </div>
             <div>
               <img
                 alt={`Close Up Of ${name}`}
-                src={`http://localhost:1337${closeUp}`}
+                src={`${closeUp}`}
               />
             </div>
           </Carousel>
