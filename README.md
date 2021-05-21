@@ -11,6 +11,7 @@ This application is currently being built. The purpose of this application is to
 - React 
 - HTML
 - CSS
+- MailChimp (https://mailchimp.com/)
 - React Icons (https://react-icons.github.io/react-icons/)
 - React Responsive Carousel (https://www.npmjs.com/package/react-responsive-carousel)
 
