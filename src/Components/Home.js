@@ -16,7 +16,7 @@ function Home() {
       {/*BEST VERSION <img alt="heavenly delights logo" src="/images/logo9.png" id="logo"/> */}
       <div className="home-text"><b><p>United By The Flower That Unites Us All</p></b></div>
       <div className="home-btn"><button onClick={navigateTo}>Check Out Our Menu</button></div>
-      <div className="home-contact"><div class="contact-btns">
+      <div className="home-contact"><div className="contact-btns">
       <a
         href="https://www.instagram.com/heavenlydelightss/"
         target="_blank"

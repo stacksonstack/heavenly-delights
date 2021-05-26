@@ -3,15 +3,17 @@ import BakeryPreview from "../Components/BakeryPreview";
 import { Route, Switch } from "react-router-dom";
 import BakeryInfo from "../Components/BakeryInfo";
 
-function BakeryContainer(props) {
+function BakeryContainer() {
   const [bakery, setBakery] = useState([]);
 
   useEffect(() => {
-    fetch("https://heavenly-delights-api.herokuapp.com/bakeries")
-      .then((res) => res.json())
-      .then((res) => setBakery(res));
+    async function fetchData(){ 
+      let response = await fetch("https://heavenly-delights-api.herokuapp.com/bakeries")
+      let data = await response.json()
+      setBakery(data)
+    }
+    fetchData()
   }, []);
-
   return (
     <>
     
@@ -28,6 +30,7 @@ function BakeryContainer(props) {
                     <h1>Loading...</h1>
                   ) : (
                     <div className="bakery-container">
+                      {console.log(bakery)}
                       {bakery.map((bakedGood) => (
                         <BakeryPreview
                           key={bakedGood._id}

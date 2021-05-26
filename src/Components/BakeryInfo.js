@@ -51,14 +51,14 @@ function BakeryInfo({
           )}
         </div>
         <div className="info-img">
-          <Carousel>
+          <Carousel >
             <div>
-              <img alt={name} src={`${image}`} />
+              <img alt={name} src={`https://heavenly-delights-api.herokuapp.com${image}`} />
             </div>
             <div>
               <img
                 alt={`Close Up Of ${name}`}
-                src={`${closeUp}`}
+                src={`https://heavenly-delights-api.herokuapp.com${closeUp}`}
               />
             </div>
           </Carousel>
