@@ -218,12 +218,9 @@ input:focus {
   /*Overriding css*/
 }
 .nav {
-  height: 50px;
+  height: fit-content;
   width: 100vw;
   margin: 0px;
-  /* border-style: solid;
-    border-color: rgb(149, 217, 223);
-    border-width: 7px; */
   text-align: center;
   font-weight: bold;
   background-color: rgba(244, 144, 144, 0.5);
@@ -311,7 +308,7 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 275px;
-  margin: 50px;
+  margin: 25px;
 }
 #bakery-img,
 #beverage-img {
@@ -332,6 +329,7 @@ h2 {
 }
 
 .bakery-info-div {
+  width: 90%;
   display: grid;
   grid-template-areas:
     "iName iName"
@@ -339,7 +337,7 @@ h2 {
     "iImg iMl"
     "iImg iPrice"
     "iImg iAvail";
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 125px 90px 50px 50px;
 }
 
@@ -348,6 +346,7 @@ h2 {
 }
 .info-desc {
   grid-area: iDesc;
+  padding-bottom: 10px;
 }
 #info-desc,
 #info-price,
@@ -448,7 +447,7 @@ h2 {
     min-height: 93vh;
   }
   .about-container {
-    grid-template-areas: "about" "newsletter";
+    grid-template-areas: "newsletter" "about";
   }
   .bakery-info-div {
     grid-template-columns: 1fr 1fr;
@@ -462,27 +461,59 @@ h2 {
   .bakery-info-div {
     grid-template-areas:
       "iName iName"
-      "iImg iPrice"
-      "iImg iMl" 
-      "iImg iAvail"
+      "iImg iImg"
+      "iAvail iAvail"
+      "iPrice iMl"
       "iDesc iDesc";
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 100px 100px 170px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    width: 80%;
   }
-  .info-desc {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-   
-  }
-  #info-desc{
+  #info-desc,
+  #info-price,
+  #info-ml,
+  #info-avail {
     text-align: center;
   }
-  #info-ml, #info-price{
+
+  #info-ml,
+  #info-price {
     font-weight: bold;
+  }
+
+  #info-desc{
+    margin-bottom: 50px;
   }
 }
 
-@media (max-width: 880px) {
-  
+@media (max-width: 420px) {
+  #home-title {
+    font-size: 2rem;
+  }
+  .home-text {
+    font-size: 1rem;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #logo {
+    width: 225px;
+    height: 225px;
+  }
+  .home {
+    grid-template-rows: 100px 240px 70px 40px;
+  }
+
+  #home-btn {
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  input {
+    width: 40%;
+  }
 }

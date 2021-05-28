@@ -6,14 +6,15 @@ import BeverageInfo from "../Components/BeverageInfo";
 function BeverageContainer() {
   const [beverage, setBeverage] = useState([]);
 
-  
   useEffect(() => {
-    async function fetchData(){ 
-      let response = await fetch("https://heavenly-delights-api.herokuapp.com/beverages")
-      let data = await response.json()
-      setBeverage(data)
+    async function fetchData() {
+      let response = await fetch(
+        "https://heavenly-delights-api.herokuapp.com/beverages"
+      );
+      let data = await response.json();
+      setBeverage(data);
     }
-    fetchData()
+    fetchData();
   }, []);
 
   return (

@@ -7,16 +7,17 @@ function BakeryContainer() {
   const [bakery, setBakery] = useState([]);
 
   useEffect(() => {
-    async function fetchData(){ 
-      let response = await fetch("https://heavenly-delights-api.herokuapp.com/bakeries")
-      let data = await response.json()
-      setBakery(data)
+    async function fetchData() {
+      let response = await fetch(
+        "https://heavenly-delights-api.herokuapp.com/bakeries"
+      );
+      let data = await response.json();
+      setBakery(data);
     }
-    fetchData()
+    fetchData();
   }, []);
   return (
     <>
-    
       <>
         <Switch>
           <Route
@@ -49,7 +50,7 @@ function BakeryContainer() {
               );
             }}
           />
-          
+
           <Route
             path="/bakery/:id"
             render={({ match }) => {
@@ -59,22 +60,24 @@ function BakeryContainer() {
               );
               return (
                 <>
-                   <div className="container">
-                {bakery.length === 0 ? (
-                    <h1>Loading...</h1>
-                  ) : (
-                <BakeryInfo
-                  key={foundBakedGood._id}
-                  name={foundBakedGood.name}
-                  desc={foundBakedGood.description}
-                  price={foundBakedGood.price}
-                  ml={foundBakedGood.milligrams}
-                  isAvailable={foundBakedGood.isAvailable}
-                  onSale={foundBakedGood.onSale}
-                  salePrice={foundBakedGood.salePrice}
-                  image={foundBakedGood.image.formats.thumbnail.url}
-                  closeUp={foundBakedGood.close_up.formats.thumbnail.url}
-                />)}</div>
+                  <div className="container">
+                    {bakery.length === 0 ? (
+                      <h1>Loading...</h1>
+                    ) : (
+                      <BakeryInfo
+                        key={foundBakedGood._id}
+                        name={foundBakedGood.name}
+                        desc={foundBakedGood.description}
+                        price={foundBakedGood.price}
+                        ml={foundBakedGood.milligrams}
+                        isAvailable={foundBakedGood.isAvailable}
+                        onSale={foundBakedGood.onSale}
+                        salePrice={foundBakedGood.salePrice}
+                        image={foundBakedGood.image.formats.thumbnail.url}
+                        closeUp={foundBakedGood.close_up.formats.thumbnail.url}
+                      />
+                    )}
+                  </div>
                 </>
               );
             }}

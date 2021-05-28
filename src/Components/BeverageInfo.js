@@ -51,9 +51,12 @@ function BeverageInfo({
           )}
         </div>
         <div className="info-img">
-        <Carousel>
+          <Carousel>
             <div>
-              <img  alt={name} src={`https://heavenly-delights-api.herokuapp.com${image}`} />
+              <img
+                alt={name}
+                src={`https://heavenly-delights-api.herokuapp.com${image}`}
+              />
             </div>
             <div>
               <img
