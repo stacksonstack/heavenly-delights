@@ -16,11 +16,12 @@ function BakeryPreview({
         <div className="bakery-preview">
           <h3>{name}</h3>
 
-          <img
+          {/* <img
             id="bakery-img"
             alt={name}
             src={`https://heavenly-delights-api.herokuapp.com${image}`}
-          />
+          /> */}
+          <img alt={name} src={`/images/Screen Shot 2021-05-20 at 7.49.08 PM.png`} />
           {onSale ? (
             <div className="price">
               {" "}

@@ -55,13 +55,18 @@ function BeverageInfo({
             <div>
               <img
                 alt={name}
-                src={`https://heavenly-delights-api.herokuapp.com${image}`}
+                src={`/images/Screen Shot 2021-05-20 at 7.48.53 PM.png`}
               />
+              
             </div>
             <div>
-              <img
+              {/* <img
                 alt={`Close Up Of ${name}`}
                 src={`https://heavenly-delights-api.herokuapp.com${closeUp}`}
+              /> */}
+               <img
+                alt={`Close Up Of ${name}`}
+                src={`/images/Screen Shot 2021-05-20 at 7.50.35 PM.png`}
               />
             </div>
           </Carousel>

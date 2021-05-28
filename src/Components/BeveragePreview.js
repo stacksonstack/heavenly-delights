@@ -16,11 +16,15 @@ function BeveragePreview({
         <div className="beverage-preview">
           <h3>{name}</h3>
 
-          <img
+          {/* <img
             id="beverage-img"
             alt={name}
             src={`https://heavenly-delights-api.herokuapp.com${image}`}
-          />
+          /> */}
+          <img
+                alt={name}
+                src={`/images/Screen Shot 2021-05-20 at 7.48.53 PM.png`}
+              />
           {onSale ? (
             <div className="price">
               {" "}
